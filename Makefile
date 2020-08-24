@@ -88,3 +88,6 @@ infrastructure:
 
 destroy:
 	(cd terraform && terraform init && terraform destroy)
+
+clean:
+	(rm -fr config ignition terraform/.terraform terraform/terraform.tfstate terraform/terraform.tfstate.backup openshift-client-linux-$(OPENSHIFT_RELEASE).tar.gz openshift-install-linux-$(OPENSHIFT_RELEASE).tar.gz)
